@@ -3,6 +3,40 @@
 }
 
 
+
+
+
+.contact-socials-icons-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.contact-socials-icons {
+    width: 50px;
+    height: 50px;
+
+    background-color: rgba(0, 0, 0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.contact-socials-icons:hover {
+    background: linear-gradient(to right, #000000, #ff3131);
+}
+
+.contact-socials-icons img {
+    width: 30px;
+}
+
+
+
+
+
 .faq-accordion {
     display: flex;
     justify-content: center;
@@ -16,7 +50,7 @@
 
 
 .faq-social {
-    background-color: #000000;
+    background-color: #F5F6F7;
     padding: 40px 20px;
     border-radius: 10px;
 
@@ -24,7 +58,7 @@
 
 
 .faq-social h2 {
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     margin-bottom: 10px;
 }
@@ -41,7 +75,7 @@
     padding: 10px;
     margin-top: 20px;
     border-radius: 5px;
-    background: linear-gradient(to top, #00000086, #810d0d86);
+    background: linear-gradient(to top, #000000, #ff0000a4);
 
 }
 
@@ -76,12 +110,17 @@
 }
 
 
+
+
+
+
+
 .accordion {
     width: 100%;
 }
 
 .item {
-    background: linear-gradient(to right, #000000, #ff3131);
+    background-color: #F5F6F7;
     margin-bottom: 12px;
     border-radius: 8px;
     overflow: hidden;
@@ -96,7 +135,7 @@
     align-items: center;
     font-weight: 600;
     font-size: 1rem;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .answer {
@@ -104,7 +143,7 @@
     overflow: hidden;
     padding: 0 16px;
     line-height: 1.5;
-    color: white;
+    color: #810d0d;
     transition: max-height 0.4s ease, padding 0.3s ease;
 }
 
