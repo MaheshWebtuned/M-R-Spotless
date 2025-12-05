@@ -427,3 +427,68 @@ window.addEventListener('scroll', () => {
 
   breadcrumbSection.style.transform = `scale(${scale})`;
 });
+
+
+
+
+
+
+
+
+
+
+
+// Gallery section from project page
+
+document.addEventListener("DOMContentLoaded", () => {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".close");
+  const prevBtn = document.querySelector(".arrow.left");
+  const nextBtn = document.querySelector(".arrow.right");
+  const galleryImages = document.querySelectorAll(".gallery-image");
+
+  let currentIndex = 0;
+
+  // Open image in lightbox
+  galleryImages.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      currentIndex = index;
+      openLightbox(img.src);
+    });
+  });
+
+  function openLightbox(src) {
+    lightbox.style.display = "flex";
+    lightboxImg.src = src;
+  }
+
+  function closeLightbox() {
+    lightbox.style.display = "none";
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    lightboxImg.src = galleryImages[currentIndex].src;
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    lightboxImg.src = galleryImages[currentIndex].src;
+  }
+
+  // Event Listeners
+  nextBtn.addEventListener("click", showNext);
+  prevBtn.addEventListener("click", showPrev);
+  closeBtn.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") showNext();
+    if (e.key === "ArrowLeft") showPrev();
+  });
+});

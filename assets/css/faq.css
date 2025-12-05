@@ -72,7 +72,7 @@
 
 .faq-call {
     text-align: center;
-    padding: 10px;
+    padding: 20px 10px;
     margin-top: 20px;
     border-radius: 5px;
     background: linear-gradient(to top, #000000, #ff0000a4);
@@ -158,5 +158,6 @@
 
 .item.open .icon {
     transform: rotate(45deg);
+    color: var(--primary-red);
     /* + becomes × */
 }
